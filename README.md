@@ -73,6 +73,8 @@ output:
 ```You have 12410 days, 1768 weeks, and 408 months left.```
 
 ```
+eg:2 
+
 //Create your function below this line.
 //The first parameter should be the weight and the second should be the height.
 
@@ -88,19 +90,81 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 */
 ```
+# Using if-else statement in js
+
+-Note:Equality operator in js is written like === and not ==.
+
+```
+function isLeap(year) {
+    
+/**************Don't change the code above****************/    
+    
+    //Write your code here. 
+    if(year%4===0 && year%100===0){
+        return 'Not Leap year.';
+    }else if(year%4===0 && year%100===0 && year%400===0){
+        return 'Leap year.';
+    }else if(year%4===0){
+        return 'Leap year.';
+    }
+    else{
+        return 'Not leap year.'
+    }
 
 
+    
+
+/**************Don't change the code below****************/    
+
+}
+```
 
 
+# Arrays in JS:
+
+- Note: cant declare an array like ```var myarr[];```.Instead, ```var myarr=[];``` is correct.
+
+```
+var myNum =[1,2,3,4,5,6,8];
+myNum[2];//returns 3...
+
+if(nyNum.includes(8)){
+    console.log('YES');
+}
+else{
+    console.log('NO');
+}
+
+```
+
+```array_name.includes(x)``` determines whether x is present inside the array ```array_name```.Returns bool value / 0-1.
+
+# FizzBuzz:
+
+```
+//fizzbuzz
+
+for(var i=1;i<=100;i++){
+    if(i%3===0 &&i%5===0){
+        console.log("FizzBuzz");
+    }
+    else if(i%5===0){
+    console.log("Buzz");
+    }
+    else if(i%3===0){ 
+    console.log("Fizz");
+    }
+    else{
+        console.log(i);
+    }
+    console.log('\n');
+}
+
+```
 
 
-
-
-
-
-
-
-
+```arr.push(x)``` is a function that can be used to push or append a number or any data type inside the last position of the array arr.
+```arr.pop()``` is a function that pops or removes the defined position of data type off from that array arr.
 
 
 
