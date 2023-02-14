@@ -16,7 +16,73 @@ typeof(data_type) is used to find data type of the data_type in js.
 
 ```var``` = a type of container which is used to store data.
 
-# Concatenation 
+# String:
+
+- String.length
+- String.slice()
+- String.substr()
+- String.replace()
+- String.replaceAll()
+- String.toUpperCase()
+- String.toLowerCase()
+- String.concat()
+- String.trim()
+- String.trimStart()
+- String.trimEnd()
+- String.padStart()
+- String.padEnd()
+- String.charAt()
+- String.charCodeAt()
+- String.split()
+
+
+# JavaScript Search Methods:
+- String.search()
+- String.indexOf()
+- String.lastIndexOf()
+- String.search()
+- String.match()
+- String.matchAll()
+- String.includes()
+- String.startsWith()
+- String.endsWith()
+
+# String Methods
+
+toString()     --> Returns a number as a string
+toExponential()--> Returns a number written in exponential notation
+toFixed()	   --> Returns a number written with a number of decimals
+toPrecision()  --> Returns a number written with a specified length
+ValueOf()	   --> Returns a number as a number
+
+# Sorting Methods:
+
+- sort():
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+//alphabetically sorts the array.
+
+```
+- reverse():
+
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+```
+
+By default, the sort() function sorts values as strings.
+This works well for strings ("Apple" comes before "Banana").However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".Because of this, the sort() method will produce incorrect result when sorting numbers.You can fix this by providing a compare function:
+
+Example
+```
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+```
+
+# Concatenation:
 
 It is the way of joining strings with other strings/data types.
 
@@ -157,7 +223,7 @@ for(var i=1;i<=100;i++){
     else{
         console.log(i);
     }
-    console.log('\n');
+    console.log('//n');
 }
 
 ```
@@ -203,17 +269,313 @@ Note:that querySelector is a beneficial tag than getElement... methods as they'r
 ```
 help in operating the modification in css through js.
 
+# Event Listener in JS:
+
+The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.you can add many event handlers to one element.
+
+# Syntax:
+
+## element.addEventListener(event, function, useCapture);
+- The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event.)
+
+- The second parameter is the function we want to call when the event occurs.
+
+- The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+
+
+## Types of HTML events:
+
+- When a user clicks the mouse
+- When a web page has loaded
+- When an image has been loaded
+- When the mouse moves over an element
+- When an input field is changed
+- When an HTML form is submitted
+- When a user strokes a key
+
+eg:
+```
+document.querySelector("btn").addEventListener("click",handleClick);
+
+function handleClick(){
+    alert("button was clicked!");
+}
+
+```
+
+NOTE:NEVER USE THE FUNCTION INSIDE THE addEventListener func with () as it triggers the function directly.
+
+
+Note:anonymous functions are simialr to normal functions,the difference is just that they dont have any name and are directly used inside the event listener.
+
+
+# Higher Order Functions:
+
+Functions that return another function are called Higher Order Functions:
+
+```
+function sum(num1,num2){
+    return num1+num2;
+}
+
+function multiply(num1,num2){
+    return num1*num2;
+}
+
+function calculator_hof(num1,num2,operator){
+    return operator(num1,num2);
+}
+
+```
+### How to play sounds in HTML Using JS:
+```
+var audio = new Audio('audio_file.mp3');
+audio.play();
+
+//Tap into the audio hardware
+//Check the file at File location exists
+//check the filelocation is a sound file
+//Play the file at FileLocation
+
+```
+
+# Javascript Objects:
+
+## Type-1:
+
+//Creating an object:
+var Bellboy1 ={
+    name:"timmy";
+    age:19;
+    color:"black";
+
+//accesing:
+Bellboy1.name;
+Bellboy1.color;
+
+}
+
+## Type-2 aka Constructor Function :
+
+```
+function BellBoy(name,age,color){
+    this.name=naam,
+    this.age=umar,
+    this.color=color,
+}
+
+'this' is kind of similar to 'self' keyword in python,i guess...
+
+//Creating a new object with the help of construction function:
+var bellBoy1 = new BellBoy("Timmy",19,"black");
+
+```
+
+# Switch Case in JS:
+
+```
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+# Method:
+
+function BellBoy(name,age,color){
+    this.name=naam,
+    this.age=umar,
+    this.color=color,
+    this.picking=function(){
+        alert("May i pick your bag");
+    }
+}
+
+
+document.addEventListener("keydown",function(event){
+    jsfunction(event.key){
+            //code.
+    }
+}
+
+# Date generator:
+
+```
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+```
+
+# Math functions:
+
+- Math.round(x)	Returns x rounded to its nearest integer
+- Math.ceil(x)	Returns x rounded up to its nearest integer
+- Math.floor(x)	Returns x rounded down to its nearest integer
+- Math.trunc(x)	Returns the integer part of x (new in ES6)
+- Math.sign(x)  Returns the sign of x as true / false.
+- abs(x)	Returns the absolute value of x
+- acos(x)	Returns the arccosine of x, in radians
+- acosh(x)	Returns the hyperbolic arccosine of x
+- asin(x)	Returns the arcsine of x, in radians
+- asinh(x)	Returns the hyperbolic arcsine of x
+- atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+- atan2(y, x)	Returns the arctangent of the quotient of its arguments
+- atanh(x)	Returns the hyperbolic arctangent of x
+- cbrt(x)	Returns the cubic root of x
+- ceil(x)	Returns x, rounded upwards to the nearest integer
+- cos(x)	Returns the cosine of x (x is in radians)
+- cosh(x)	Returns the hyperbolic cosine of x
+- exp(x)	Returns the value of Ex
+- floor(x)	Returns x, rounded downwards to the nearest integer
+- log(x)	Returns the natural logarithm (base E) of x
+- max(x, y, z, ..., n)	Returns the number with the highest value
+- min(x, y, z, ..., n)	Returns the number with the lowest value
+- pow(x, y)	Returns the value of x to the power of y
+- random()	Returns a random number between 0 and 1
+- round(x)	Rounds x to the nearest integer
+- sign(x)	Returns if x is negative, null or positive (-1, 0, 1)
+- sin(x)	Returns the sine of x (x is in radians)
+- sinh(x)	Returns the hyperbolic sine of x
+- sqrt(x)	Returns the square root of x
+- tan(x)	Returns the tangent of an angle
+- tanh(x)	Returns the hyperbolic tangent of a number
+- trunc(x)	Returns the integer part of a number (x)
+- Math.random() Returns a random value between 0 and 0.999
+
+
+# For In loop in  Java script:
+
+The JavaScript for in statement loops through the properties of an Object:
+
+Example
+```
+const person = {fname:"John", lname:"Doe", age:25};
+
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+```
+
+## Example Explained:
+The for in loop iterates over a person object
+Each iteration returns a key (x)
+The key is used to access the value of the key
+The value of the key is person[x]
+
+# Bitwise Operators:
+```
+&	AND	Sets each bit to 1 if both bits are 1
+|	OR	Sets each bit to 1 if one of two bits is 1
+^	XOR	Sets each bit to 1 if only one of two bits is 1
+~	NOT	Inverts all the bits
+<<	Zero fill left shift	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
+>>	Signed right shift	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+```
+
+
+# Javascript Objects:
+```In JavaScript, objects are king. If you understand objects, you understand JavaScript.```
+
+
+In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+All JavaScript values, except primitives, are objects.
 
 
 
+JavaScript variables can also contain many values.Objects are variables too. But objects can contain many values.
+Object values are written as name : value pairs (name and value separated by a colon).
+
+```
+Example
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+```
+It is a common practice to declare objects with the const keyword.
 
 
 
+## Object Methods:
+Methods are actions that can be performed on objects.Object properties can be both primitive values, other objects, and functions.
+An object method is an object property containing a function definition.
 
+## Object Properties:
+Properties are the values associated with a JavaScript object.A JavaScript object is a collection of unordered properties.
 
+Properties can usually be changed, added, and deleted, but some are read only.
 
+The syntax for accessing the property of an object is:
+```ObjectName.property      // person.age```
 
+## Nested Objects
+Values in an object can be another object:
 
+Example
+myObj = {
+  name:"John",
+  age:30,
+  cars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+You can access nested objects using the dot notation or the bracket notation:
+
+```
+Example
+myObj.cars.car2;
+```
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+## What is ```this```?
+In JavaScript, the ```this``` keyword refers to an object.
+Which object depends on how this is being invoked (used or called).
+
+The ```this``` keyword refers to different objects depending on how it is used:
+
+- In an object method, this refers to the object.
+- Alone, this refers to the global object.
+- In a function, this refers to the global object.
+- In a function, in strict mode, this is undefined.
+- In an event, this refers to the element that received the event.
+- Methods like call(), apply(), and bind() can refer this to any object.
+
+# Note -1:
+this is not a variable. It is a keyword. You cannot change the value of this.
+# Note -2:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+If you access the fullName property, without (), it will return the function definition:
 
 
 
