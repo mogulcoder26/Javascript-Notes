@@ -577,6 +577,60 @@ const person = {
 
 If you access the fullName property, without (), it will return the function definition:
 
+# Fun Fact:
+The ```integrity``` and ```crossorigin``` attributes are used for Subresource Integrity (SRI) checking. This allows browsers to ensure that resources hosted on third-party servers have not been tampered with. Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source. 
+
+
+# JQuery(a js library which helps in writing js code.):
+
+CDN: 
+```
+ <script>src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+```
+
+
+the ```$``` symbol is used to send a query all over the document to find the attribute which is getting targeted.Also keep in mind that it is similar to ```querySelector/querySelectorAll``` attribute which is used to select one /many attributes at the same time.BUT with JQuery/($),it selects ALL of the tags.
+
+```
+$("h1").css("color","green");
+console.log($("h1").css("color"));
+```
+
+- $().addClass() adds class
+- $().removeClass()  removes class
+- $().toggleClass() toggles between classes
+- $().text()  Changes texts inside the tag
+
+# Adding event listeners using JQuery:
+```
+- $().click(function(){
+    $("h1").css("color","grey");
+})
+```
+
+```
+$("h1").before("<button>New</button>);
+$("h1").after("<button>New</button>);
+$("h1").append("<button>New</button>);
+$("h1").prepend("<button>New</button>);
+```
+ 
+ # Animations:
+
+ $("h1).hide();
+ $("h1").show();
+ $('h1').slideUp();
+ $("h1").slideDown();
+ $("h1").slideToggle();
+
+
+# Web API's:
+
+
+
+
 
 
 
