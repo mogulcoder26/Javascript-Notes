@@ -1,0 +1,71 @@
+/* Generalized CSS */
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    text-align: center;
+    position: relative;
+    top: 200px;
+    background-image: url(C://Users//KIIT//Desktop//Memories//photo-1481627834876-b7833e8f5570.jpg);
+}
+
+.main-head{
+    background-color: antiquewhite;
+    width: 400px;
+   margin-left: auto;
+   margin-right: auto;
+    margin-top: 0;
+    position: relative;
+    bottom: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+h2{
+    padding-top:20px;
+    text-align: center;
+    position: relative;
+    left:auto;
+    right: auto;
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+.main-content{
+    background-color: black;
+    width: 600px;
+    line-height: 2;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+
+
+h3{
+    color: azure;
+    font-family: monospace;
+    font-size: 25px;
+
+}
+
+span{
+    padding-top: 20px;
+    color:red;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    line-height: 2;
+}
+
+.btn-quote{
+    margin-top:20px;
+    width: 100px;
+    height: 60px;
+}
