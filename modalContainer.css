@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0px;
+}
+
+
+
+
+body {
+
+    background-image: url("C://Users//KIIT//Desktop//Web Development//tree-736885_1280.jpg");
+
+}
+
+#open-btn {
+    position: relative;
+    top: 460px;
+    left: 60px;
+    border: 2px solid red;
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    background: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.5s;
+
+}
+
+#open-btn:hover {
+    background-color: aliceblue;
+
+}
+
+
+
+
+#main-content {
+    border: 2px solid palegoldenrod;
+    width: 300px;
+    font-family:cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: azure;
+    position: absolute;
+    left: 20px;
+    animation-name: animatemodal;
+    animation-duration: 0.5s;
+    display: none;
+}
+
+@keyframes animatemodal {
+    from {
+        top: -300px;
+        width: 0px;
+        opacity: 0;
+    }
+
+    to {
+        top: 101px;
+        width: 300px;
+        opacity: 1;
+    }
+}
+
+#close-btn {
+    position: relative;
+    left: 260px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 1s;
+    animation-name: gayab;
+    animation-duration: 1s;
+}
+
+/* @keyframes gayab {
+   0% {
+        opacity: 1;
+        animation-delay: 2s;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+
+
+} */
