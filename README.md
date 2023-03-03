@@ -576,6 +576,20 @@ const person = {
 };
 
 If you access the fullName property, without (), it will return the function definition:
+eg:
+```
+const employee={
+    firstName:"Soubhik",
+    lastName:"Gon",
+    age:18,
+    eyeColor:"blue",
+    fullName:function(){
+     return this.firstName+" "+this.lastName;    
+    }
+}
+
+console.log(employee.fullName());
+```
 
 # Fun Fact:
 The ```integrity``` and ```crossorigin``` attributes are used for Subresource Integrity (SRI) checking. This allows browsers to ensure that resources hosted on third-party servers have not been tampered with. Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source. 
